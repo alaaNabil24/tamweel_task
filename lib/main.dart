@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:market_app_task/core/theme/app_colors.dart';
-import 'package:market_app_task/features/cart/domain/entities/cart_data.dart';
+
 
 import 'core/di/injection_container.dart';
 import 'core/helpers/dio_helper.dart';
@@ -15,7 +15,7 @@ void main() async {
   await initializeDependencies();
   await Hive.initFlutter();
   Hive.registerAdapter(ProductAdapter());
-  Hive.registerAdapter(CartItemAdapter());
+
  runApp(const MyApp());
 }
 

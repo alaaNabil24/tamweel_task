@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../features/cart/presentation/pages/cart_page.dart';
 import '../theme/app_colors.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -17,17 +16,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: AppColors.primaryColor,
       actions: [
 
-        if(!isCartPage)
-        IconButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const CartPage()));
-            },
-            icon: const Icon(
-              Icons.shopping_cart_sharp,
-              color: Colors.white,
-              size: 30,
-            ))
+
       ],
     );
   }
