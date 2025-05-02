@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/theme/app_colors.dart';
 import '../../../mainPage/presentation/pages/about_page.dart';
 import '../../../mainPage/presentation/pages/complaint_page.dart';
 import '../../../mainPage/presentation/pages/contact_page.dart';
@@ -51,17 +52,19 @@ class _HomeScreenState extends State<NavBarPage> {
             topRight: Radius.circular(20.0),
           ),
           child: BottomNavigationBar(
-            items: const <BottomNavigationBarItem>[
+
+            items:  <BottomNavigationBarItem>[
 
               BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_bag_outlined),
-                activeIcon: Icon(Icons.shopping_bag , color: Colors.green,),
+                activeIcon: Icon(Icons.shopping_bag , color:AppColors.primaryColor,),
                 label: 'Products',
 
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.contact_phone_outlined),
-                activeIcon: Icon(Icons.contact_phone),
+
+                activeIcon: Icon(Icons.contact_phone , color:AppColors.primaryColor,),
                 label: 'Contact Us',
               ),
 
@@ -79,8 +82,9 @@ class _HomeScreenState extends State<NavBarPage> {
             currentIndex: _selectedIndex,
             onTap: _onItemTapped,
             type: BottomNavigationBarType.fixed,
-            selectedItemColor: Theme.of(context).primaryColor,
+            selectedItemColor:  AppColors.primaryColor,
             unselectedItemColor: Colors.grey,
+
             showUnselectedLabels: true,
             elevation: 0,
           ),

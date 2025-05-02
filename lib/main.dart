@@ -6,8 +6,10 @@ import 'package:market_app_task/core/theme/app_colors.dart';
 
 import 'core/di/injection_container.dart';
 import 'core/helpers/dio_helper.dart';
+import 'features/nav_bar/presentation/pages/nav_bar.dart';
 import 'features/products/domain/entities/product_data.dart';
 import 'features/products/presentation/pages/products_page.dart';
+import 'features/splash/presentation/splash_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
         useMaterial3: false,
       ),
-      home: const ProductsPage(),
+      home: const NavBarPage(),
     );
   }
 }
